@@ -1,0 +1,26 @@
+<div class="flex justify-center mt-4">
+  <table class="table-auto w-[1300px]">
+    <thead>
+      <tr class="bg-slate-100">
+        <th class="border border-slate-300 rounded">ID</th>
+        <th class="border border-slate-300">Album ID</th>
+        <th class="border border-slate-300">Title</th>
+        <th class="border border-slate-300 rounded">Url</th>
+        <th class="border border-slate-300 rounded">Thumbnail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let photo of photos" class="text-xs text-center">
+        <td class="mx-8 px-8 py-4 border border-slate-300">{{photo.id}}</td>
+        <td class="mx-8 px-8 py-4 border border-slate-300">{{photo.albumId}}</td>
+        <td class="mx-8 px-8 py-4 border border-slate-300">{{photo.title}}</td>
+        <td class="mx-8 px-8 py-4 border border-slate-300">{{photo.url}}</td>
+        <td class="mx-8 px-8 py-4 border border-slate-300">
+          <div class="flex justify-center">
+            <img src="{{photo.thumbnailUrl}}" alt="Photo Thumbnail" class="w-[50px] h-[50px]">
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
